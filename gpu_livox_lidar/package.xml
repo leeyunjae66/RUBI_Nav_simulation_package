@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>gpu_livox_lidar</name>
+  <version>0.1.0</version>
+  <description>
+    GPU-rendered Livox (MID-360) LiDAR plugin for Gazebo Classic 11: samples a gpu_ray
+    range image along the Livox scan pattern; output compatible with ros2_livox.
+  </description>
+  <maintainer email="210678775+leeyunjae66@users.noreply.github.com">leeyunjae66</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>gazebo_dev</depend>
+  <depend>gazebo_ros</depend>
+  <depend>rclcpp</depend>
+  <depend>sensor_msgs</depend>
+  <depend>livox_ros_driver2</depend>
+  <exec_depend>ros2_livox_simulation</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

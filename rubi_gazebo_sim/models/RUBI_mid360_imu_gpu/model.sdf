@@ -1,0 +1,823 @@
+<?xml version='1.0'?>
+
+<sdf version='1.7'>
+  <model name='RUBI'>
+  
+  <!-- <joint name="fixed to ground" type="fixed">
+      <parent>world</parent>
+      <child>BODY</child>
+      <axis>
+        <xyz>0 0 0.5</xyz>
+      </axis>
+    </joint> -->
+
+    <link name='BODY'>
+      <inertial>
+        <pose>-0.009721 0.002671 0.03209 0 -0 0</pose>
+        <mass>17.3057</mass>
+        <inertia>
+          <ixx>0.204468</ixx>
+          <ixy>0.00163962</ixy>
+          <ixz>-0.0198948</ixz>
+          <iyy>0.378326</iyy>
+          <iyz>-0.0021502</iyz>
+          <izz>0.411009</izz>
+        </inertia>
+      </inertial>
+      <!-- <collision name='BODY_collision'>
+        <pose>-0.0225 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.384 0.01 0.144</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='BODY_collision_1'>
+        <pose>0.128 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.083 0.28 0.166</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='BODY_collision_2'>
+        <pose>0.128 0.1 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.083</length>
+            <radius>0.0645</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='BODY_collision_3'>
+        <pose>0.128 -0.1 0 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.083</length>
+            <radius>0.0645</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='BODY_collision_4'>
+        <pose>0.2095 0 0.09 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.12</length>
+            <radius>0.005</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='BODY_collision_5'>
+        <pose>0.2095 0 -0.09 1.5708 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.12</length>
+            <radius>0.005</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='BODY_collision_6'>
+        <pose>-0.1635 0 0 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.102 0.311 0.144</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='BODY_collision_7'>
+        <pose>0.0285 0 0.144 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.282 0.21 0.072</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='BODY_collision_8'>
+        <pose>0.0055 0.125 0.124 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.196</length>
+            <radius>0.012</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='BODY_collision_9'>
+        <pose>0.0055 -0.125 0.124 0 1.5708 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.196</length>
+            <radius>0.012</radius>
+          </cylinder>
+        </geometry>
+      </collision> -->
+      <collision name='BODY_collision_10'>
+        <pose>0.1495 0.1 -0.095 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.024</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='BODY_collision_11'>
+        <pose>0.1495 -0.1 -0.095 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.024</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='BODY_collision_12'>
+        <pose>-0.0925 0.1 -0.095 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.024</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='BODY_collision_13'>
+        <pose>-0.0925 -0.1 -0.095 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.024</length>
+            <radius>0.01</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='BODY_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://RUBI/meshes/BODY.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient> 1.0 1.0 1.0 1 </ambient>
+          <diffuse> 1.0 1.0 1.0 1 </diffuse> 
+          <specular> 1.0 1.0 1.0 1 </specular>
+          <shininess> 200 </shininess>
+        </material>
+      </visual>
+      <sensor name='IMU' type='imu'>
+        <pose relative_to='BODY'>0 0 0 0 -0 0</pose>
+        <imu>
+          <angular_velocity>
+            <x>
+              <noise type='none'></noise>
+            </x>
+            <y>
+              <noise type='none'></noise>
+            </y>
+            <z>
+              <noise type='none'></noise>
+            </z>
+          </angular_velocity>
+          <linear_acceleration>
+            <x>
+              <noise type='none'></noise>
+            </x>
+            <y>
+              <noise type='none'></noise>
+            </y>
+            <z>
+              <noise type='none'></noise>
+            </z>
+          </linear_acceleration>
+        </imu>
+        <always_on>1</always_on>
+        <update_rate>1000</update_rate>
+        <visualize>true</visualize>
+      </sensor>
+    </link>
+    <joint name='L_HR_JOINT' type='revolute'>
+      <pose relative_to='BODY'>0 0.1 0 0 -0 0</pose>
+      <parent>BODY</parent>
+      <child>L_HIP</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.436</lower>
+          <upper>0.436</upper>
+          <effort>90</effort>
+          <velocity>13</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+          <damping>0.130617712993805</damping>
+          <friction>0.359645908223244</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_HIP'>
+      <pose relative_to='L_HR_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.012947 -0.028612 0.00121 0 -0 0</pose>
+        <mass>2.02025</mass>
+        <inertia>
+          <ixx>0.00226659</ixx>
+          <ixy>-0.00101923</ixy>
+          <ixz>0.00018324</ixz>
+          <iyy>0.00509637</iyy>
+          <iyz>3.669e-05</iyz>
+          <izz>0.00481241</izz>
+        </inertia>
+      </inertial>
+      <!-- <collision name='L_HIP_collision'>
+        <pose>0 -0.0375 0 1.5709 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.075</length>
+            <radius>0.0645</radius>
+          </cylinder>
+        </geometry>
+      </collision> -->
+      <visual name='L_HIP_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://RUBI/meshes/L_HIP.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient> 1.0 0.0 0.0 1 </ambient>
+          <diffuse> 1.0 1.0 1.0 1 </diffuse> 
+          <specular> 1.0 1.0 1.0 1 </specular>
+          <shininess> 200 </shininess>
+        </material>
+      </visual>
+    </link>
+    <joint name='L_HP_JOINT' type='revolute'>
+      <pose relative_to='L_HIP'>0 0.1195 0 0 -0 0</pose>
+      <parent>L_HIP</parent>
+      <child>L_THIGH</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.959</lower>
+          <upper>2.356</upper>
+          <effort>90</effort>
+          <velocity>13</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+          <damping>0.130617712993805</damping>
+          <friction>0.359645908223244</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_THIGH'>
+      <pose relative_to='L_HP_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.005237 -0.047597 -0.027984 0 -0 0</pose>
+        <mass>3.21816</mass>
+        <inertia>
+          <ixx>0.0229692</ixx>
+          <ixy>0.00052796</ixy>
+          <ixz>-0.00171022</ixz>
+          <iyy>0.0206062</iyy>
+          <iyz>0.00399873</iyz>
+          <izz>0.0071764</izz>
+        </inertia>
+      </inertial>
+      <!-- <collision name='L_THIGH_collision'>
+        <pose>0 -0.02825 0 1.5709 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0915</length>
+            <radius>0.0585</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='L_THIGH_collision_1'>
+        <pose>-0.0295 0 -0.165 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.058 0.039 0.16</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='L_THIGH_collision_2'>
+        <pose>0 0.017 -0.3 1.5709 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.005</length>
+            <radius>0.0165</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='L_THIGH_collision_3'>
+        <pose>0 -0.017 -0.3 1.5709 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.005</length>
+            <radius>0.0165</radius>
+          </cylinder>
+        </geometry>
+      </collision> -->
+      <visual name='L_THIGH_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://RUBI/meshes/L_THIGH.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient> 1.0 0.0 0.0 1 </ambient>
+          <diffuse> 1.0 1.0 1.0 1 </diffuse> 
+          <specular> 1.0 1.0 1.0 1 </specular>
+          <shininess> 200 </shininess>
+        </material>
+      </visual>
+    </link>
+    <joint name='L_KN_JOINT' type='revolute'>
+      <pose relative_to='L_THIGH'>0 0 -0.3 0 -0 0</pose>
+      <parent>L_THIGH</parent>
+      <child>L_CALF</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-2.967</lower>
+          <upper>-0.436</upper>
+          <effort>90</effort>
+          <velocity>13</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+          <damping>0.130617712993805</damping>
+          <friction>0.359645908223244</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='L_CALF'>
+      <pose relative_to='L_KN_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.0047 8.1e-05 -0.159265 0 -0 0</pose>
+        <mass>0.447791</mass>
+        <inertia>
+          <ixx>0.00702543</ixx>
+          <ixy>1.64733e-07</ixy>
+          <ixz>9.54954e-05</ixz>
+          <iyy>0.00709416</iyy>
+          <iyz>-5.56576e-06</iyz>
+          <izz>0.000109927</izz>
+        </inertia>
+      </inertial>
+      <collision name='L_CALF_collision'>
+        <pose>0 0 0 1.5709 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.025</length>
+            <radius>0.0165</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <!-- <collision name='L_CALF_collision_1'>
+        <pose>0.006251 0 0.035453 1.5709 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.025</length>
+            <radius>0.012</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='L_CALF_collision_2'>
+        <pose>0 0 -0.16 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.025 0.2</size>
+          </box>
+        </geometry>
+      </collision> -->
+      <collision name='L_CALF_fixed_joint_lump__L_TIP_collision_3'>
+        <pose>0 0 -0.3 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.032</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <bounce>
+            <restitution_coefficient> 0 </restitution_coefficient>
+          </bounce>
+          <friction>
+            <ode>
+              <mu>  100  </mu>
+              <mu2> 1  </mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+      	        <kp>10000000</kp>
+                <kd>10000</kd>
+<!--               <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth> -->
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='L_CALF_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://RUBI/meshes/L_CALF.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient> 1.0 1.0 1.0 1 </ambient>
+          <diffuse> 1.0 1.0 1.0 1 </diffuse> 
+          <specular> 1.0 1.0 1.0 1 </specular>
+          <shininess> 200 </shininess>
+        </material>
+      </visual>
+      <visual name='L_CALF_fixed_joint_lump__L_TIP_visual_1'>
+        <pose>0 0 -0.3 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://RUBI/meshes/L_TIP.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient> 0.0 0.0 0.0 1 </ambient>
+          <diffuse> 1.0 1.0 1.0 1 </diffuse> 
+          <specular> 1.0 1.0 1.0 1 </specular>
+          <shininess> 200 </shininess>
+        </material>
+      </visual>
+    </link>
+    <joint name='R_HR_JOINT' type='revolute'>
+      <pose relative_to='BODY'>0 -0.1 0 0 -0 0</pose>
+      <parent>BODY</parent>
+      <child>R_HIP</child>
+      <axis>
+        <xyz>1 0 0</xyz>
+        <limit>
+          <lower>-0.436</lower>
+          <upper>0.436</upper>
+          <effort>90</effort>
+          <velocity>13</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+          <damping>0.130617712993805</damping>
+          <friction>0.359645908223244</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_HIP'>
+      <pose relative_to='R_HR_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.012946 0.028612 0.001207 0 -0 0</pose>
+        <mass>2.02025</mass>
+        <inertia>
+          <ixx>0.00227156</ixx>
+          <ixy>0.00101909</ixy>
+          <ixz>0.00018811</ixz>
+          <iyy>0.00509645</iyy>
+          <iyz>-3.703e-05</iyz>
+          <izz>0.00480753</izz>
+        </inertia>
+      </inertial>
+      <!-- <collision name='R_HIP_collision'>
+        <pose>0 0.0375 0 1.5709 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.075</length>
+            <radius>0.0645</radius>
+          </cylinder>
+        </geometry>
+      </collision> -->
+      <visual name='R_HIP_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://RUBI/meshes/R_HIP.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient> 1.0 0.0 0.0 1 </ambient>
+          <diffuse> 1.0 1.0 1.0 1 </diffuse> 
+          <specular> 1.0 1.0 1.0 1 </specular>
+          <shininess> 200 </shininess>
+        </material>
+      </visual>
+    </link>
+    <joint name='R_HP_JOINT' type='revolute'>
+      <pose relative_to='R_HIP'>0 -0.1195 0 0 -0 0</pose>
+      <parent>R_HIP</parent>
+      <child>R_THIGH</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-0.959</lower>
+          <upper>2.356</upper>
+          <effort>90</effort>
+          <velocity>13</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+          <damping>0.130617712993805</damping>
+          <friction>0.359645908223244</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_THIGH'>
+      <pose relative_to='R_HP_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>-0.005236 0.047597 -0.027985 0 -0 0</pose>
+        <mass>3.21816</mass>
+        <inertia>
+          <ixx>0.022962</ixx>
+          <ixy>-0.00052769</ixy>
+          <ixz>-0.00171031</ixz>
+          <iyy>0.020606</iyy>
+          <iyz>-0.00399902</iyz>
+          <izz>0.00718344</izz>
+        </inertia>
+      </inertial>
+      <!-- <collision name='R_THIGH_collision'>
+        <pose>0 0.02825 0 1.5709 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.0915</length>
+            <radius>0.0585</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='R_THIGH_collision_1'>
+        <pose>-0.0295 0 -0.165 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.058 0.039 0.16</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='R_THIGH_collision_2'>
+        <pose>0 -0.017 -0.3 1.5709 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.005</length>
+            <radius>0.0165</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='R_THIGH_collision_3'>
+        <pose>0 0.017 -0.3 1.5709 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.005</length>
+            <radius>0.0165</radius>
+          </cylinder>
+        </geometry>
+      </collision> -->
+      <visual name='R_THIGH_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://RUBI/meshes/R_THIGH.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient> 1.0 0.0 0.0 1 </ambient>
+          <diffuse> 1.0 1.0 1.0 1 </diffuse> 
+          <specular> 1.0 1.0 1.0 1 </specular>
+          <shininess> 200 </shininess>
+        </material>
+      </visual>
+    </link>
+    <joint name='R_KN_JOINT' type='revolute'>
+      <pose relative_to='R_THIGH'>0 0 -0.3 0 -0 0</pose>
+      <parent>R_THIGH</parent>
+      <child>R_CALF</child>
+      <axis>
+        <xyz>0 1 0</xyz>
+        <limit>
+          <lower>-2.967</lower>
+          <upper>-0.436</upper>
+          <effort>90</effort>
+          <velocity>13</velocity>
+        </limit>
+        <dynamics>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+          <damping>0.130617712993805</damping>
+          <friction>0.359645908223244</friction>
+        </dynamics>
+      </axis>
+    </joint>
+    <link name='R_CALF'>
+      <pose relative_to='R_KN_JOINT'>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose>0.0047 -8.1e-05 -0.159265 0 -0 0</pose>
+        <mass>0.44779</mass>
+        <inertia>
+          <ixx>0.00702541</ixx>
+          <ixy>-1.64746e-07</ixy>
+          <ixz>9.55054e-05</ixz>
+          <iyy>0.00709414</iyy>
+          <iyz>5.5655e-06</iyz>
+          <izz>0.000109927</izz>
+        </inertia>
+      </inertial>
+      <collision name='R_CALF_collision'>
+        <pose>0 0 0 1.5709 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.025</length>
+            <radius>0.0165</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <!-- <collision name='R_CALF_collision_1'>
+        <pose>0.006251 0 0.035453 1.5709 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.025</length>
+            <radius>0.012</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <collision name='R_CALF_collision_2'>
+        <pose>0 0 -0.16 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.03 0.025 0.2</size>
+          </box>
+        </geometry>
+      </collision> -->
+      <collision name='R_CALF_fixed_joint_lump__R_TIP_collision_3'>
+        <pose>0 0 -0.3 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.032</radius>
+          </sphere>
+        </geometry>
+        <surface>
+          <bounce>
+            <restitution_coefficient> 0 </restitution_coefficient>
+          </bounce>
+          <friction>
+            <ode>
+              <mu>  100  </mu>
+              <mu2> 1  </mu2>
+            </ode>
+          </friction>
+          <contact>
+            <ode>
+      	        <kp>10000000</kp>
+                <kd>10000</kd>
+<!--               <max_vel>0.1</max_vel>
+              <min_depth>0.0001</min_depth> -->
+            </ode>
+          </contact>
+        </surface>
+      </collision>
+      <visual name='R_CALF_visual'>
+        <pose>0 0 0 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://RUBI/meshes/R_CALF.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient> 1.0 1.0 1.0 1 </ambient>
+          <diffuse> 1.0 1.0 1.0 1 </diffuse> 
+          <specular> 1.0 1.0 1.0 1 </specular>
+          <shininess> 200 </shininess>
+        </material>
+      </visual>
+      <visual name='R_CALF_fixed_joint_lump__R_TIP_visual_1'>
+        <pose>0 0 -0.3 0 -0 0</pose>
+        <geometry>
+          <mesh>
+            <scale>1 1 1</scale>
+            <uri>model://RUBI/meshes/R_TIP.STL</uri>
+          </mesh>
+        </geometry>
+        <material>
+          <ambient> 0.0 0.0 0.0 1 </ambient>
+          <diffuse> 1.0 1.0 1.0 1 </diffuse> 
+          <specular> 1.0 1.0 1.0 1 </specular>
+          <shininess> 200 </shininess>
+        </material>
+      </visual>
+    </link>
+    <link name='livox_frame_raw'>
+      <pose relative_to='livox_frame'>0 0 0 3.141592653589793 0 0</pose>
+      <inertial>
+        <pose>0 0 0 1.5707963267948966 0 1.5707963267948966</pose>
+        <mass>0.1</mass>
+        <inertia>
+          <ixx>0.00011333333333333334</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.00011333333333333334</iyy>
+          <iyz>0</iyz>
+          <izz>0.00006</izz>
+        </inertia>
+      </inertial>
+      <visual name='livox_frame_raw_visual'>
+        <geometry>
+          <box>
+            <size>0.1 0.06 0.06</size>
+          </box>
+        </geometry>
+        <material>
+          <ambient>0.08 0.10 0.12 1</ambient>
+          <diffuse>0.16 0.75 0.48 1</diffuse>
+          <specular>0.25 0.25 0.25 1</specular>
+        </material>
+      </visual>
+      <sensor name='livox_frame_raw' type='gpu_ray'>
+        <!-- GPU-rendered MID-360: gpu_livox_lidar samples this 0.2 deg range image
+             along the Livox scan pattern. Same name, topic and frame as the CPU model. -->
+        <pose>0 0 0 0 0 0</pose>
+        <always_on>true</always_on>
+        <visualize>false</visualize>
+        <update_rate>10</update_rate>
+        <ray>
+          <scan>
+            <horizontal>
+              <samples>1800</samples>
+              <resolution>1</resolution>
+              <min_angle>-3.1415927</min_angle>
+              <max_angle>3.1381020</max_angle>
+            </horizontal>
+            <vertical>
+              <samples>300</samples>
+              <resolution>1</resolution>
+              <min_angle>-0.1274090</min_angle>
+              <max_angle>0.9128072</max_angle>
+            </vertical>
+          </scan>
+          <range>
+            <min>0.1</min>
+            <max>200.0</max>
+            <resolution>0.002</resolution>
+          </range>
+        </ray>
+        <plugin name='livox_frame_raw_plugin' filename='libgpu_livox_plugin.so'>
+          <csv_file_name>/tmp/rubi_mid360_imu_mid360.csv</csv_file_name>
+          <samples>40000</samples>
+          <downsample>1</downsample>
+          <topic>/livox/lidar_raw</topic>
+        </plugin>
+      </sensor>
+      <sensor name='mid360_imu' type='imu'>
+        <pose>0.011 0.02329 -0.04412 0 0 0</pose>
+        <always_on>true</always_on>
+        <update_rate>200</update_rate>
+        <visualize>false</visualize>
+        <imu>
+          <angular_velocity>
+            <x><noise type='gaussian'><mean>0</mean><stddev>0</stddev></noise></x>
+            <y><noise type='gaussian'><mean>0</mean><stddev>0</stddev></noise></y>
+            <z><noise type='gaussian'><mean>0</mean><stddev>0</stddev></noise></z>
+          </angular_velocity>
+          <linear_acceleration>
+            <x><noise type='gaussian'><mean>0</mean><stddev>0</stddev></noise></x>
+            <y><noise type='gaussian'><mean>0</mean><stddev>0</stddev></noise></y>
+            <z><noise type='gaussian'><mean>0</mean><stddev>0</stddev></noise></z>
+          </linear_acceleration>
+        </imu>
+        <plugin name='mid360_imu_ros' filename='libgazebo_ros_imu_sensor.so'>
+          <ros>
+            <namespace>/</namespace>
+            <remapping>~/out:=/livox/imu_raw</remapping>
+          </ros>
+          <initial_orientation_as_reference>false</initial_orientation_as_reference>
+          <frame_name>livox_frame_raw</frame_name>
+        </plugin>
+      </sensor>
+    </link>
+    <joint name='livox_frame_raw_joint' type='fixed'>
+      <parent>BODY</parent>
+      <child>livox_frame_raw</child>
+    </joint>
+    <frame name='livox_frame' attached_to='BODY'>
+      <pose relative_to='BODY'>0.101 0 -0.1169 0 0 0</pose>
+    </frame>
+    <frame name='L_TIP_JOINT' attached_to='L_CALF'>
+      <pose>0 0 -0.3 0 -0 0</pose>
+    </frame>
+    <frame name='L_TIP' attached_to='L_TIP_JOINT'/>
+    <frame name='R_TIP_JOINT' attached_to='R_CALF'>
+      <pose>0 0 -0.3 0 -0 0</pose>
+    </frame>
+    <frame name='R_TIP' attached_to='R_TIP_JOINT'/>
+  </model>
+</sdf>
