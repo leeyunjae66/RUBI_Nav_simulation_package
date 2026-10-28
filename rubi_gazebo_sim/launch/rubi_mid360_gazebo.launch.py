@@ -37,9 +37,9 @@ def generate_launch_description():
     actions = [
         DeclareLaunchArgument('world', default_value=world),
         DeclareLaunchArgument(
-            'encoder', default_value=os.path.join(core_share, 'models', 'encoder.onnx')),
+            'encoder', default_value=os.path.join(core_share, 'models', 'rubi_plane_onnx', 'encoder.onnx')),
         DeclareLaunchArgument(
-            'policy', default_value=os.path.join(core_share, 'models', 'policy.onnx')),
+            'policy', default_value=os.path.join(core_share, 'models', 'rubi_plane_onnx', 'policy.onnx')),
         DeclareLaunchArgument('gui', default_value='true'),
         DeclareLaunchArgument('rviz', default_value='false'),
         DeclareLaunchArgument('use_sim_time', default_value='true'),

@@ -24,8 +24,8 @@ def generate_launch_description():
 
     actions = [
         DeclareLaunchArgument('world', default_value=world),
-        DeclareLaunchArgument('encoder', default_value=os.path.join(core_share, 'models', 'encoder.onnx')),
-        DeclareLaunchArgument('policy', default_value=os.path.join(core_share, 'models', 'policy.onnx')),
+        DeclareLaunchArgument('encoder', default_value=os.path.join(core_share, 'models', 'rubi_plane_onnx', 'encoder.onnx')),
+        DeclareLaunchArgument('policy', default_value=os.path.join(core_share, 'models', 'rubi_plane_onnx', 'policy.onnx')),
         DeclareLaunchArgument('gui', default_value='false'),
         DeclareLaunchArgument('paused', default_value='false'),
         DeclareLaunchArgument('verbose', default_value='true'),

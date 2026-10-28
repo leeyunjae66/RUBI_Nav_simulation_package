@@ -59,6 +59,9 @@ install(FILES
   models/rubi_w_policy.onnx
   DESTINATION share/${PROJECT_NAME}/models
 )
+install(DIRECTORY models/rubi_plane_onnx
+  DESTINATION share/${PROJECT_NAME}/models
+)
 install(DIRECTORY config/
   DESTINATION share/${PROJECT_NAME}/config
 )

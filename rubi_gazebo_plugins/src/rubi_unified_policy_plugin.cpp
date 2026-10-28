@@ -172,9 +172,9 @@ class RubiUnifiedPolicyPlugin::Impl {
 
     const auto core_share = ament_index_cpp::get_package_share_directory("rubi_control_core");
     encoder_path_ = environment_or("RUBI_GAZEBO_ENCODER",
-                                   core_share + "/models/encoder.onnx");
+                                   core_share + "/models/rubi_plane_onnx/encoder.onnx");
     policy_path_ = environment_or("RUBI_GAZEBO_POLICY",
-                                  core_share + "/models/policy.onnx");
+                                  core_share + "/models/rubi_plane_onnx/policy.onnx");
     self_test_ = environment_flag("RUBI_GAZEBO_SELF_TEST", false);
     command_timeout_ = std::stod(environment_or("RUBI_GAZEBO_COMMAND_TIMEOUT", "0.5"));
     policy_test_ticks_ =

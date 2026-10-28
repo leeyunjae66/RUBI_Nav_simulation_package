@@ -142,9 +142,9 @@ def generate_launch_description():
         DeclareLaunchArgument('support_size_y', default_value=str(defaults['size']['y'])),
         DeclareLaunchArgument('support_size_z', default_value=str(defaults['size']['z'])),
         DeclareLaunchArgument(
-            'encoder', default_value=os.path.join(core_share, 'models', 'encoder.onnx')),
+            'encoder', default_value=os.path.join(core_share, 'models', 'rubi_plane_onnx', 'encoder.onnx')),
         DeclareLaunchArgument(
-            'policy', default_value=os.path.join(core_share, 'models', 'policy.onnx')),
+            'policy', default_value=os.path.join(core_share, 'models', 'rubi_plane_onnx', 'policy.onnx')),
         DeclareLaunchArgument(
             'legacy_policy', default_value=os.path.join(
                 core_share, 'models', 'rubi_gazebo_legacy_policy.onnx')),

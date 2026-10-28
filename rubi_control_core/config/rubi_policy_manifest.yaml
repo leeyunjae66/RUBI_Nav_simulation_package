@@ -17,14 +17,14 @@ inference_decimation: 5
 models:
   encoder:
     source_realpath: "/home/kim/rubi_package/[26.06.26]rclab_mujoco_sim/rclab_mujoco_sim/src/onnx_data/rubi/encoder.onnx"
-    package_uri: "package://rubi_control_core/models/encoder.onnx"
+    package_uri: "package://rubi_control_core/models/rubi_plane_onnx/encoder.onnx"
     sha256: "240f84634a7485d9099f3b05dba9c060f806d249410b17a83226242073846b84"
     input: {name: mlp_input, raw_shape: [300], normalized_features: 300, dtype: float32}
     output: {name: mlp_output, raw_shape: [3], normalized_features: 3, dtype: float32}
     contract_match: true
   policy:
     source_realpath: "/home/kim/rubi_package/[26.06.26]rclab_mujoco_sim/rclab_mujoco_sim/src/onnx_data/rubi/policy.onnx"
-    package_uri: "package://rubi_control_core/models/policy.onnx"
+    package_uri: "package://rubi_control_core/models/rubi_plane_onnx/policy.onnx"
     sha256: "dd28517d2ffd39181e999792272babab05259bc3fca3fa06e2864b1b340a80dc"
     input: {name: mlp_input, raw_shape: [36], normalized_features: 36, dtype: float32}
     output: {name: mlp_output, raw_shape: [6], normalized_features: 6, dtype: float32}
